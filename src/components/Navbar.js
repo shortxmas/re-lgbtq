@@ -27,27 +27,27 @@ export const Navbar = ()=>{
                         </a>
                         </li>
                         <li className="nav-item">
-                        <a href="/safe-zone/" className="nav-link">
+                        <a href="/safe-zone.html" className="nav-link">
                             Safe Zone
                         </a>
                         </li>
                         <li className="nav-item">
-                        <a href="/programs/" className="nav-link">
+                        <a href="/programs.html" className="nav-link">
                             Student Programs
                         </a>
                         </li>
                         <li className="nav-item">
-                        <a href="/rights/" className="nav-link">
+                        <a href="/rights.html" className="nav-link">
                             Rights
                         </a>
                         </li>
                         <li className="nav-item">
-                        <a href="/resources/" className="nav-link">
+                        <a href="/resources.html" className="nav-link">
                             Resources
                         </a>
                         </li>
                         <li className="nav-item">
-                        <a href="/contact/" className="nav-link">
+                        <a href="/contact.html" className="nav-link">
                             Contact Us
                         </a>
                         </li>

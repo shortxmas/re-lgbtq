@@ -7,8 +7,8 @@ export const Navbar = ()=>{
         <>
             <div className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div className="container">
-                    <a href="/" className="navbar-brand">
-                     <img src="assets/logowhite.png" width="116" height="80" className="d-inline-block align-top" alt=""></img>
+                    <a href="/lgbtq/" className="navbar-brand">
+                     <img src="../assets/logowhite.png" width="116" height="80" className="d-inline-block align-top" alt=""></img>
                     </a>
                     <button
                     className="navbar-toggler"
@@ -22,32 +22,32 @@ export const Navbar = ()=>{
                     <div className="collapse navbar-collapse" id="nav">
                     <ul className="navbar-nav navbar-right">
                         <li className="nav-item">
-                        <a href="/" className="nav-link">
+                        <a href="/lgbtq/" className="nav-link">
                             Home
                         </a>
                         </li>
                         <li className="nav-item">
-                        <a href="/safe-zone.html" className="nav-link">
+                        <a href="/lgbtq/safe-zone.html" className="nav-link">
                             Safe Zone
                         </a>
                         </li>
                         <li className="nav-item">
-                        <a href="/programs.html" className="nav-link">
+                        <a href="/lgbtq/programs.html" className="nav-link">
                             Student Programs
                         </a>
                         </li>
                         <li className="nav-item">
-                        <a href="/rights.html" className="nav-link">
+                        <a href="/lgbtq/rights.html" className="nav-link">
                             Rights
                         </a>
                         </li>
                         <li className="nav-item">
-                        <a href="/resources.html" className="nav-link">
+                        <a href="/lgbtq/resources.html" className="nav-link">
                             Resources
                         </a>
                         </li>
                         <li className="nav-item">
-                        <a href="/contact.html" className="nav-link">
+                        <a href="/lgbtq/contact.html" className="nav-link">
                             Contact Us
                         </a>
                         </li>

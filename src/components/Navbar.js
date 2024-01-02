@@ -5,7 +5,7 @@ export const Navbar = ()=>{
 
     return(
         <>
-            <div className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <a href="/lgbtq/" className="navbar-brand">
                      <img src="../assets/logowhite.png" width="116" height="80" className="d-inline-block align-top" alt=""></img>

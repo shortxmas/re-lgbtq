@@ -9,7 +9,7 @@ export const HomePage = () =>{
     
     <>
         <Navbar/>
-        <div className='container py-5 my-5'>
+        <div className='container py-5'>
         <Footer/>
         </div>
 

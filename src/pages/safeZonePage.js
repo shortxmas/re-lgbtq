@@ -9,7 +9,7 @@ export const SafeZonePage = () =>{
     <>
         <Navbar/>
         <div className='container py-5'>
-            safe zone page
+           
         </div>
     </>
 

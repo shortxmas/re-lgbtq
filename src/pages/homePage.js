@@ -10,8 +10,6 @@ export const HomePage = () =>{
         <Navbar/>
         <div className='container py-5 my-5'>
     
-          This is the home page
-         
         </div>
 
     </>

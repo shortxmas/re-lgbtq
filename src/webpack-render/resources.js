@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ResourcesPage } from '../pages/resources';
+import { ResourcesPage } from '../pages/resourcesPage';
 
 // Clear the existing HTML content
 document.body.innerHTML = '<div id="app"></div>';

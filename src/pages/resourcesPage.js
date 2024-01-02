@@ -9,7 +9,7 @@ export const ResourcesPage = () =>{
     <>
         <Navbar/>
         <div className='container py-5'>
-            Resources page r
+            
         </div>
     </>
 

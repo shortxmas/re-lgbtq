@@ -9,7 +9,9 @@ export const HomePage = () =>{
     <>
         <Navbar/>
         <div className='container py-5'>
-            Home page
+            <br></br>
+          This is the home page
+          Sincerely, Jalen lum
         </div>
 
     </>

@@ -12,7 +12,7 @@ export const Navbar = ()=>{
             <div className="navbar navbar-expand-lg navbar-dark fixed-top" style={{backgroundColor:'#2C4230'}}>
                 <div className="container">
                     <a href="/lgbtq/" className="navbar-brand">
-                     <img src="../../assets/logowhite.png" width="109" height="75" className="d-inline-block align-top" alt=""></img>
+                     <img src="../../assets/logowhite.png" width="102" height="70" className="d-inline-block align-top" alt=""></img>
                     </a>
                     <button
                     className="navbar-toggler"

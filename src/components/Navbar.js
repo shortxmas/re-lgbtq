@@ -12,7 +12,7 @@ export const Navbar = ()=>{
             <div className="navbar navbar-expand-lg navbar-dark fixed-top" style={{backgroundColor:'#2C4230'}}>
                 <div className="container">
                     <a href="/lgbtq/" className="navbar-brand">
-                     <img src="../../assets/logowhite.png" width="109" height="75" className="d-inline-block align-top" alt=""></img>
+                     <img src="../../assets/logowhite.png" width="94" height="65" className="d-inline-block align-top" alt=""></img>
                     </a>
                     <button
                     className="navbar-toggler"
@@ -55,7 +55,7 @@ export const Navbar = ()=>{
                         </li>
                     </ul>
                     </div>
-                    <span className="navbar-text fw-bold" style={{fontFamily:'Poppins'}}>Lesbian, Gay, Bisexual, Transgender & Queer+ LGBTQ+ Center</span>
+                    <span className="navbar-text fw-bold" style={{fontFamily:'Poppins'}}>Lesbian, Gay, Bisexual, Transgender & Queer+ Center</span>
                 </div>
             </div>
         </>

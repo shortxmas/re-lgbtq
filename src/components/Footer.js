@@ -1,16 +1,18 @@
 import React, { useState,useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
-export const Footers = ()=>{
+export const Footer = ()=>{
 
     return(
         <>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <footer className="text-center text-lg-start text-white bg-dark">
                 <section className="d-flex justify-content-between p-4" style={{backgroundColor: '#2C4230'}}>
+                
                     <div className="me-5">
-                        <span>Get connected with us on social networks:</span>
+                        <span>Get connected with us on our social networks:</span>
                     </div>
+
                     <div>
                         <a href="" className="text-white me-4">
                             <i className="fab fa-facebook-f"></i>
@@ -31,11 +33,13 @@ export const Footers = ()=>{
                             <i className="fab fa-github"></i>
                         </a>
                     </div>
+
                 </section>
 
                 <section className="">
                     <div className="container text-center text-md-start mt-5">
                         <div className="row mt-3">
+
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                                 <h6 className="text-uppercase fw-bold">LGBTQ+ Center</h6>
                                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
@@ -89,6 +93,7 @@ export const Footers = ()=>{
                                 <p><i className="fa fa-envelope mr-3"></i> lgbtq@hawaii.edu</p>
                                 <p><i className="fa fa-phone mr-3"></i> + 1 (808) 956-9250</p>
                             </div>
+
                         </div>
                     </div>
                 </section>

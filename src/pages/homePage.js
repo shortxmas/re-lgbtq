@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Navbar } from '../components/Navbar';
-import { Footers } from '../components/Footers';
+import { Footer } from '../components/Footer';
 
 export const HomePage = () =>{
 
@@ -12,7 +12,7 @@ export const HomePage = () =>{
         <div className='container py-5'>
         
         </div>
-        <Footers/>
+        <Footer/>
 
     </>
 

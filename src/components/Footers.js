@@ -37,7 +37,7 @@ export const Footers = ()=>{
                     <div className="container text-center text-md-start mt-5">
                         <div className="row mt-3">
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                <h6 className="text-uppercase fw-bold">LBTQ+ Center</h6>
+                                <h6 className="text-uppercase fw-bold">LGBTQ+ Center</h6>
                                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
                                 <p>
                                     Here you can use rows and columns to organize your footer
@@ -83,10 +83,11 @@ export const Footers = ()=>{
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                                 <h6 className="text-uppercase fw-bold">Contact</h6>
                                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
-                                <p><i className="fa fa-home mr-3"></i> Honolulu, HI 96822, US</p>
-                                <p><i className="fa fa-envelope mr-3"></i> info@example.com</p>
-                                <p><i className="fa fa-phone mr-3"></i> + 01 234 567 88</p>
-                                <p><i className="fa fa-print mr-3"></i> + 01 234 567 89</p>
+                                <p><i className="fa fa-home mr-3"></i> University of Hawai&#699;i</p>
+                                <p>&ensp;&ensp; 2600 Campus Rd., QLCSS #211</p>
+                                <p>&ensp;&ensp; Honolulu, HI 96822, US</p>
+                                <p><i className="fa fa-envelope mr-3"></i> lgbtq@hawaii.edu</p>
+                                <p><i className="fa fa-phone mr-3"></i> + 1 (808) 956-9250</p>
                             </div>
                         </div>
                     </div>

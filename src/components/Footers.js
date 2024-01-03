@@ -21,7 +21,7 @@ export const Footers = ()=>{
                         <a href="" className="text-white me-4">
                             <i className="fab fa-google"></i>
                         </a>
-                        <a href="" className="text-white me-4">
+                        <a href="https://www.instagram.com/uhmlgbtqcenter/" target="_blank" className="text-white me-4">
                             <i className="fab fa-instagram"></i>
                         </a>
                         <a href="" className="text-white me-4">

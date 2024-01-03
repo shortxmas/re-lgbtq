@@ -5,10 +5,14 @@ export const Navbar = ()=>{
 
     return(
         <>
-            <div className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet"></link>
+
+            <div className="navbar navbar-expand-lg navbar-dark fixed-top" style={{backgroundColor:'#2C4230'}}>
                 <div className="container">
                     <a href="/lgbtq/" className="navbar-brand">
-                     <img src="../assets/logowhite.png" width="116" height="80" className="d-inline-block align-top" alt=""></img>
+                     <img src="../../assets/logowhite.png" width="109" height="75" className="d-inline-block align-top" alt=""></img>
                     </a>
                     <button
                     className="navbar-toggler"
@@ -26,26 +30,24 @@ export const Navbar = ()=>{
                             Home
                         </a>
                         </li>
-                        <li className="nav-item">
-                        <a href="/lgbtq/safe-zone.html" className="nav-link">
-                            Safe Zone
+                       
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Offered Programs
                         </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/lgbtq/programs/advising.html">Advising</a></li>
+                            <li><a class="dropdown-item" href="/lgbtq/programs/events.html">Events</a></li>
+                            <li><a class="dropdown-item" href="/lgbtq/programs/rainbow-programs.html">Rainbow Programs</a></li>
+                        </ul>
                         </li>
-                        <li className="nav-item">
-                        <a href="/lgbtq/programs.html" className="nav-link">
-                            Student Programs
-                        </a>
-                        </li>
+                        
                         <li className="nav-item">
                         <a href="/lgbtq/rights.html" className="nav-link">
-                            Rights
+                            Rights & Resources
                         </a>
                         </li>
-                        <li className="nav-item">
-                        <a href="/lgbtq/resources.html" className="nav-link">
-                            Resources
-                        </a>
-                        </li>
+                    
                         <li className="nav-item">
                         <a href="/lgbtq/contact.html" className="nav-link">
                             Contact Us
@@ -53,7 +55,7 @@ export const Navbar = ()=>{
                         </li>
                     </ul>
                     </div>
-                    <span className="navbar-text">Lesbian, Gay, Bisexual, Transgender & Queer+ LGBTQ+ Center</span>
+                    <span className="navbar-text fw-bold" style={{fontFamily:'Poppins'}}>Lesbian, Gay, Bisexual, Transgender & Queer+ LGBTQ+ Center</span>
                 </div>
             </div>
         </>

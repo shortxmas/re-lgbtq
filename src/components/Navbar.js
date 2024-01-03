@@ -55,7 +55,7 @@ export const Navbar = ()=>{
                         </li>
                     </ul>
                     </div>
-                    <span className="navbar-text fw-bold" style={{fontFamily:'Poppins'}}>Lesbian, Gay, Bisexual, Transgender & Queer+ Center</span>
+                    <span className="navbar-text fw-bold" style={{fontFamily:'Poppins', color:'whitesmoke'}}>Lesbian, Gay, Bisexual, Transgender & Queer+ Center</span>
                 </div>
             </div>
         </>

@@ -5,6 +5,7 @@ export const Footers = ()=>{
 
     return(
         <>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <footer className="text-center text-lg-start text-white bg-dark">
                 <section className="d-flex justify-content-between p-4" style={{backgroundColor: '#2C4230'}}>
                     <div className="me-5">
@@ -36,7 +37,7 @@ export const Footers = ()=>{
                     <div className="container text-center text-md-start mt-5">
                         <div className="row mt-3">
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                <h6 className="text-uppercase fw-bold">Company name</h6>
+                                <h6 className="text-uppercase fw-bold">LBTQ+ Center</h6>
                                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
                                 <p>
                                     Here you can use rows and columns to organize your footer
@@ -82,7 +83,7 @@ export const Footers = ()=>{
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                                 <h6 className="text-uppercase fw-bold">Contact</h6>
                                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
-                                <p><i className="fa fa-home mr-3"></i> New York, NY 10012, US</p>
+                                <p><i className="fa fa-home mr-3"></i> Honolulu, HI 96822, US</p>
                                 <p><i className="fa fa-envelope mr-3"></i> info@example.com</p>
                                 <p><i className="fa fa-phone mr-3"></i> + 01 234 567 88</p>
                                 <p><i className="fa fa-print mr-3"></i> + 01 234 567 89</p>
@@ -90,8 +91,6 @@ export const Footers = ()=>{
                         </div>
                     </div>
                 </section>
-
-
             </footer>
         </>
     )

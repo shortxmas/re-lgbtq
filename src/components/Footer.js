@@ -15,22 +15,10 @@ export const Footer = ()=>{
 
                     <div>
                         <a href="" className="text-white me-4">
-                            <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fab fa-google"></i>
+                            <i className="fab fa-discord"></i>
                         </a>
                         <a href="https://www.instagram.com/uhmlgbtqcenter/" target="_blank" className="text-white me-4">
                             <i className="fab fa-instagram"></i>
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fab fa-linkedin"></i>
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fab fa-github"></i>
                         </a>
                     </div>
 
@@ -44,43 +32,7 @@ export const Footer = ()=>{
                                 <h6 className="text-uppercase fw-bold">LGBTQ+ Center</h6>
                                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
                                 <p>
-                                    Here you can use rows and columns to organize your footer
-                                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                </p>
-                            </div>
-
-                            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <h6 className="text-uppercase fw-bold">Products</h6>
-                                <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
-                                <p>
-                                    <a href="#!" className="text-white">MDBootstrap</a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">MDWordPress</a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">BrandFlow</a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">Bootstrap Angular</a>
-                                </p>
-                            </div>
-
-                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <h6 className="text-uppercase fw-bold">Useful links</h6>
-                                <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
-                                <p>
-                                    <a href="#!" className="text-white">Your Account</a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">Become an Affiliate</a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">Shipping Rates</a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">Help</a>
+                                    <img src="../../assets/logowhite.png" className="d-inline-block align-top" alt=""></img>
                                 </p>
                             </div>
 
@@ -88,8 +40,8 @@ export const Footer = ()=>{
                                 <h6 className="text-uppercase fw-bold">Contact</h6>
                                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
                                 <p><i className="fa fa-home mr-3"></i> University of Hawai&#699;i</p>
-                                <p>&ensp;&ensp; 2600 Campus Rd., QLCSS #211</p>
-                                <p>&ensp;&ensp; Honolulu, HI 96822, US</p>
+                                <p>2600 Campus Rd., QLCSS #211</p>
+                                <p>Honolulu, HI 96822, US</p>
                                 <p><i className="fa fa-envelope mr-3"></i> lgbtq@hawaii.edu</p>
                                 <p><i className="fa fa-phone mr-3"></i> + 1 (808) 956-9250</p>
                             </div>
@@ -97,6 +49,9 @@ export const Footer = ()=>{
                         </div>
                     </div>
                 </section>
+                <div class="text-center p-3" style={{backgroundColor: '#2C4230'}}>
+                    ©2018-{new Date().getFullYear().toString().slice(-2)} University of Hawai&#699;i · Page last modified: January 14, 2024 
+                </div>
             </footer>
         </>
     )

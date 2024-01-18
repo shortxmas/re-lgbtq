@@ -9,7 +9,7 @@ export const EventsPage = ()=>{
         <>
             
             <Navbar/>
-            <div className='container py-5'>
+            <div className='container'>
 
             </div>
             <Footer/>

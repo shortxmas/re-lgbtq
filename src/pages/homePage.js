@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 
 
@@ -15,6 +16,8 @@ export const HomePage = () =>{
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"></link>
 
         <Navbar/>
+        
+      
 
         <div className='d-flex container justify-content-center  flex-column ' >
 
@@ -63,7 +66,7 @@ export const HomePage = () =>{
 
         </div>
  
-        
+        <Footer/>
 
     </>
 

@@ -5,9 +5,13 @@ export const Navbar = ()=>{
 
     return(
         <>
-            <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+            {/* <link rel="preconnect" href="https://fonts.googleapis.com"></link>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true'></link>
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet"></link> */}
+
+            <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+        <   link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"></link>
 
             <div className="navbar navbar-expand-lg navbar-dark " style={{backgroundColor:'#2C4230'}}>
                 <div className="container">
@@ -25,30 +29,30 @@ export const Navbar = ()=>{
                     </button>
                     <div className="collapse navbar-collapse" id="nav">
                     <ul className="navbar-nav navbar-right">
-                        <li className="nav-item">
+                        <li className="nav-item" style={{fontFamily:'Poppins'}}>
                         <a href="/lgbtq/" className="nav-link">
                             Home
                         </a>
                         </li>
                        
-                        <li className="nav-item dropdown">
+                        <li className="nav-item dropdown" style={{fontFamily:'Poppins'}}>
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Offered Programs
                         </a>
-                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a className="dropdown-item" href="/lgbtq/programs/advising.html">Advising</a></li>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown" style={{fontFamily:'Poppins'}}>
+                            <li ><a className="dropdown-item" href="/lgbtq/programs/advising.html">Advising</a></li>
                             <li><a className="dropdown-item" href="/lgbtq/programs/events.html">Events</a></li>
                             <li><a className="dropdown-item" href="/lgbtq/programs/rainbow-programs.html">Rainbow Programs</a></li>
                         </ul>
                         </li>
                         
-                        <li className="nav-item">
+                        <li className="nav-item" style={{fontFamily:'Poppins'}}>
                         <a href="/lgbtq/rights.html" className="nav-link">
                             Rights & Resources
                         </a>
                         </li>
                     
-                        <li className="nav-item">
+                        <li className="nav-item" style={{fontFamily:'Poppins'}}>
                         <a href="/lgbtq/contact.html" className="nav-link">
                             Contact Us
                         </a>

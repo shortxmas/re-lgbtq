@@ -17,11 +17,12 @@ React (Front end framework), Webpack (Compiles javascript), Babel (React compile
 
 #### INSTALL DEPENDENCIES
 1. Make sure you have node installed on your computer
-1. In a new terminal, run "npm install"
+2. In a new terminal, run "npm install"
 
 #### RUN THE APPLICATION
 
-1. Use live server VSCode extension, right click HTML file, Open with liver server
+1. Run "npm run build" to create a build for the project
+2. Use live server VSCode extension, right click HTML file, Open with liver server
 
 ### -- Development & Production Life Cycle --
 

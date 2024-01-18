@@ -13,7 +13,7 @@ export const HomePage = () =>{
 
         <Navbar/>
 
-        <div className='d-flex container justify-content-center  flex-column py-5' data-sal="slide-up" data-sal-duration="1200">
+        <div className='d-flex container justify-content-center  flex-column ' data-sal="slide-up" data-sal-duration="1200">
 
             <div id="carouselExampleCaptions" className="carousel slide w-100 my-5" data-bs-ride="carousel">
                 <div className="carousel-indicators">

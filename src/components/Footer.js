@@ -14,9 +14,6 @@ export const Footer = ()=>{
                     </div>
 
                     <div>
-                        <a href="" className="text-white me-4">
-                            <i className="fab fa-discord"></i>
-                        </a>
                         <a href="https://www.instagram.com/uhmlgbtqcenter/" target="_blank" className="text-white me-4">
                             <i className="fab fa-instagram"></i>
                         </a>
@@ -29,19 +26,31 @@ export const Footer = ()=>{
                         <div className="row mt-3">
 
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                <h6 className="text-uppercase fw-bold">LGBTQ+ Center</h6>
-                                <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
+                                <h6 className="text-uppercase fw-bold">Newsletter</h6>
+                                <hr className="mb-2 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
                                 <p>
-                                    <img src="../../assets/logowhite.png" className="d-inline-block align-top" alt=""></img>
+                                    Want to know what we're up to? Sign up for the newsletter!
                                 </p>
+                                <form className="form">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style={{}}/>
+                                    </div>
+                                    <br />
+                                    <button type="submit" class="btn text-white" style={{backgroundColor:"#2C4230", borderRadius: 100}}>Submit</button>
+                                </form>
                             </div>
 
-                            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                <h6 className="text-uppercase fw-bold">Contact</h6>
-                                <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}}/>
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+                                <h6 class="text-uppercase fw-bold">Address</h6>
+                                <hr class="mb-2 mt-0 d-inline-block mx-auto" style={{width:60, height:2, backgroundColor:"#7c4dff"}} />
                                 <p><i className="fa fa-home mr-3"></i> University of Hawai&#699;i</p>
                                 <p>2600 Campus Rd., QLCSS #211</p>
                                 <p>Honolulu, HI 96822, US</p>
+                            </div>
+
+                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
+                                <h6 className="text-uppercase fw-bold">Contact</h6>
+                                <hr className="mb-2 mt-0 d-inline-block mx-auto" style={{width: 60, height: 2, backgroundColor: '#7c4dff'}} />
                                 <p><i className="fa fa-envelope mr-3"></i> lgbtq@hawaii.edu</p>
                                 <p><i className="fa fa-phone mr-3"></i> + 1 (808) 956-9250</p>
                             </div>

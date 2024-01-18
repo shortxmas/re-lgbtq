@@ -1,11 +1,11 @@
 import React, { useState,useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Navbar } from '../components/Navbar';
-import sal from 'sal.js'
+
 
 
 export const HomePage = () =>{
-    var sal = require('sal.js')
+
 
     return (
     

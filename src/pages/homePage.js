@@ -54,7 +54,8 @@ export const HomePage = () =>{
 
 
 
-            <div className='text-left my-4 'style={{fontFamily:'Poppins'}} data-sal="slide-down" data-sal-duration="1200">
+            <div className='text-left my-4 'style={{fontFamily:'Poppins'}}>
+            {/* <div className='text-left my-4 'style={{fontFamily:'Poppins'}} data-sal="slide-down" data-sal-duration="1200"> */}
                 <p>We are open to serve you through walk-in counter service and in person or Zoom appointments.</p>
                 <p>Our center is open to provide you with assistance via Zoom, in-person, or over the phone, Monday-Friday from 9:00 am-5:00 pm.</p>
                 <p>Our staff is available to provide resources, referrals and student support during regular business hours. To speak with Director Camaron Miyamoto, please make an appointment with this link: calendly.com/uhmlgbtqcalendar</p>

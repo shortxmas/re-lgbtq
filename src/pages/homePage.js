@@ -12,7 +12,7 @@ export const HomePage = () =>{
     
     <>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"></link>
 
         <Navbar/>
@@ -21,7 +21,7 @@ export const HomePage = () =>{
 
         <div className='d-flex container justify-content-center  flex-column ' >
 
-            <div id="carouselExampleCaptions" className="carousel slide w-100 my-4" data-bs-ride="carousel" data-sal="slide-up" data-sal-duration="1200">
+            <div id="carouselExampleCaptions" className="carousel slide w-100 my-4" data-bs-ride="carousel" >
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>

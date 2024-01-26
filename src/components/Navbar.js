@@ -45,11 +45,16 @@ export const Navbar = ()=>{
                             <li><a className="dropdown-item" href="/lgbtq/programs/rainbow-programs.html">Rainbow Programs</a></li>
                         </ul>
                         </li>
-                        
-                        <li className="nav-item" style={{fontFamily:'Poppins'}}>
-                        <a href="/lgbtq/rights.html" className="nav-link">
+
+                        <li className="nav-item dropdown" style={{fontFamily:'Poppins'}}>
+                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Rights & Resources
                         </a>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown" style={{fontFamily:'Poppins'}}>
+                            <li ><a className="dropdown-item" href="/lgbtq/resources.html">Resources</a></li>
+                            <li><a className="dropdown-item" href="/lgbtq/rights.html">Rights</a></li>
+                            
+                        </ul>
                         </li>
                     
                         <li className="nav-item" style={{fontFamily:'Poppins'}}>

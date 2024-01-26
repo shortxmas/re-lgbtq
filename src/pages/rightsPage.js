@@ -34,8 +34,7 @@ export const RightsPage = () =>{
                     <iframe class="embed-responsive-item" src="https://map.hawaii.edu/manoa/?layer1=All-Gender%20Restrooms" ></iframe>
                 </div>
                 <h4>You have the right to use the gendered space that corresponds to your gender identity, not your assigned sex.</h4>
-                <p>Executive Policy 1.205 Policy and Guidelines on Inclusive Facilities</p>
-                <p><a href='https://hawaii.edu/policy/?action=viewPolicy&policySection=ep&policyChapter=1&policyNumber=205'>https://hawaii.edu/policy/?action=viewPolicy&policySection=ep&policyChapter=1&policyNumber=205</a></p>
+                <a href='https://hawaii.edu/policy/?action=viewPolicy&policySection=ep&policyChapter=1&policyNumber=205'><p>Executive Policy 1.205 Policy and Guidelines on Inclusive Facilities</p></a>
             </div>
 
             <div className='text-left my-4 'style={{fontFamily:'Poppins'}}>

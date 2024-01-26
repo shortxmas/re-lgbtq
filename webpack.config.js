@@ -8,6 +8,7 @@ module.exports={
     index:'./src/webpack-render/index.js',
     rainbow : './src/webpack-render/rainbowPrograms.js',
     rights : './src/webpack-render/rights.js',
+    resources : './src/webpack-render/resources.js'
     
   },
   output:{

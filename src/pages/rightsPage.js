@@ -18,7 +18,7 @@ export const RightsPage = () =>{
 
             <div className='text-left my-4 'style={{fontFamily:'Poppins'}}>
             {/* <div className='text-left my-4 'style={{fontFamily:'Poppins'}} data-sal="slide-down" data-sal-duration="1200"> */}
-                <h3 className='fw-bold'>YOUR RIGHTS</h3>
+                <h2 className='fw-bold'>RIGHTS</h2>
                 <p>Please reach out if you feel your right have experienced harassment or discrimination. You have protections against being misgendered, "dead-named", outed, or disrespected for your real or perceived sexual orientation, gender identity or gender expression.</p>
                 <p>For assistance: LGBTQ@hawaii.edu</p>
                 <p>For confidential advocacy: manoaadv@hawaii.edu</p>
@@ -30,7 +30,7 @@ export const RightsPage = () =>{
                 <p>
                     All-gender restrooms campus map link <a href='https://map.hawaii.edu/manoa/?layer1=All-Gender%20Restrooms'> here</a>
                 </p>
-                <div class="ratio ratio-21x9 my-3 border">
+                <div class="ratio ratio-4x3 my-3 border">
                     <iframe class="embed-responsive-item" src="https://map.hawaii.edu/manoa/?layer1=All-Gender%20Restrooms" ></iframe>
                 </div>
                 <h4>You have the right to use the gendered space that corresponds to your gender identity, not your assigned sex.</h4>
@@ -39,7 +39,7 @@ export const RightsPage = () =>{
 
             <div className='text-left my-4 'style={{fontFamily:'Poppins'}}>
                 <h4>Changing Your Name in UH Records</h4>
-                <div class="ratio ratio-21x9 my-3 border">
+                <div class="ratio ratio-4x3 my-3 border">
                     <iframe class="embed-responsive-item" src="https://manoa.hawaii.edu/lgbtq/downloads/name_change_preferred_name.pdf" ></iframe>
                 </div>
             </div>
@@ -61,6 +61,10 @@ export const RightsPage = () =>{
         </div>
 
         <Footer/>
+
+        <style>
+            
+        </style>
     </>
 
     )

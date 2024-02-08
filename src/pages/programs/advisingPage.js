@@ -9,8 +9,17 @@ export const AdvisingPage = ()=>{
         <>
             
             <Navbar/>
-            <div className='container'>
+            <div className='container text-left my-4' style={{fontFamily:'Poppins'}}>
 
+                <div className='my-4'>
+                    <h2 className='fw-bold'>ADVISING</h2>
+                </div>
+                <p>Our center is open to provide you with assistance via Zoom, in-person, or over the phone, Monday-Friday from 9:00 am-5:00 pm.</p>
+                <p>Our staff is available to provide resources, referrals and student support during regular business hours.</p>
+                <p>To speak with Director Camaron Miyamoto, please make an appointment with this link: <a href="https://calendly.com/uhmlgbtqcalendar">https://calendly.com/uhmlgbtqcalendar</a> or below</p>
+                <div class="ratio ratio-4x3 my-3 border">
+                    <iframe class="embed-responsive-item" src="https://calendly.com/uhmlgbtqcalendar" ></iframe>
+                </div>
             </div>
             <Footer/>
         </>

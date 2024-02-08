@@ -13,8 +13,6 @@ export const EventsPage = ()=>{
 
                 <div className='my-4'>
                     <h2 className='fw-bold'>EVENTS</h2>
-                    
-                   
                 </div>
 
                 <div className='my-4'>

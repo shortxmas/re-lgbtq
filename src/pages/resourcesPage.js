@@ -14,7 +14,7 @@ export const ResourcesPage = () =>{
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet"></link>
 
         <Navbar/>
-        <div className='container text-left my-4' style={{fontFamily:'Poppins'}}>
+        <div className='container text-left ' style={{fontFamily:'Poppins',paddingTop:115}}>
             
             <div className='my-4'>
                 <h2 className='fw-bold'>RESOURCES</h2>

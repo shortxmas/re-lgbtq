@@ -14,7 +14,7 @@ export const RightsPage = () =>{
 
         <Navbar/>
 
-        <div className='container'>
+        <div className='container' style={{paddingTop:115}}>
 
             <div className='text-left my-4 'style={{fontFamily:'Poppins'}}>
             {/* <div className='text-left my-4 'style={{fontFamily:'Poppins'}} data-sal="slide-down" data-sal-duration="1200"> */}

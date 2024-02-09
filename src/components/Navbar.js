@@ -13,8 +13,8 @@ export const Navbar = ()=>{
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
         <   link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"></link>
 
-            <div className="navbar navbar-expand-xl navbar-dark " style={{backgroundColor:'#2C4230'}}>
-                <div className="container">
+            <div className="navbar fixed-top navbar-expand-xl navbar-dark" style={{backgroundColor:'#2C4230'}}>
+                <div className="container-fluid">
                     <a href="/lgbtq/" className="navbar-brand">
                      <img src="../../assets/logowhite.png" width="94" height="65" className="d-inline-block align-top" alt=""></img>
                     </a>

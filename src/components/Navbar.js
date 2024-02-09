@@ -136,7 +136,7 @@ export const Navbar = () => {
             </ul>
           </div>
           <span
-            className="navbar-text fw-bold"
+            className="navbar-text fw-bold d-none d-md-block"
             style={{ fontFamily: "Poppins", color: "whitesmoke" }}
           >
             Lesbian, Gay, Bisexual, Transgender & Queer+ Center

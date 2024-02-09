@@ -19,7 +19,9 @@ export const HomePage = () =>{
         
       
 
-        <div className='d-flex container justify-content-center  flex-column ' >
+        <div className='d-flex container justify-content-center  flex-column' style={{
+            paddingTop:115
+        }} >
 
             <div id="carouselExampleCaptions" className="carousel slide w-100 my-4" data-bs-ride="carousel" >
                 <div className="carousel-indicators">

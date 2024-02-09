@@ -9,7 +9,7 @@ export const ContactPage = () =>{
     
     <>
         <Navbar/>
-        <div className='container'>
+        <div className='container'style={{paddingTop:115}}>
             
         </div>
         <Footer/>

@@ -26,7 +26,7 @@ export const HomePage = () => {
       <div
         className="d-flex container justify-content-center  flex-column"
         style={{
-          paddingTop: 75,
+          paddingTop: 100,
         }}
       >
         <div

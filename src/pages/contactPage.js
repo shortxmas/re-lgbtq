@@ -7,7 +7,7 @@ export const ContactPage = () => {
   return (
     <>
       <Navbar />
-      <div className="container" style={{ paddingTop: 75 }}></div>
+      <div className="container" style={{ paddingTop: 100 }}></div>
       <Footer />
     </>
   );

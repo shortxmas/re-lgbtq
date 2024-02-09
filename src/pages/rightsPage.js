@@ -69,6 +69,7 @@ export const RightsPage = () => {
               src="https://manoa.hawaii.edu/lgbtq/downloads/name_change_preferred_name.pdf"
             ></iframe>
           </div>
+          <a href="https://manoa.hawaii.edu/lgbtq/downloads/name_change_preferred_name.pdf">Download the Preferred Name Form </a>(PDF)*
         </div>
 
         <div className="text-left my-4 " style={{ fontFamily: "Poppins" }}>

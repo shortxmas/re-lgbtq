@@ -39,6 +39,7 @@ React (Front end framework), Webpack (Compiles javascript), Babel (React compile
 - Run "npm run dev" in a new terminal, this will run webpack in development mode and your changes will be re-built upon every save
 - Webpack compiles any javascript framework (we are using React in this case) into a static javaScript file that an HTML page can take as a source
 - Webpack is configured to compile to a folder called dist
+- Before you push your changes, make sure to run prettier to format all you code, You can install prettier as a VS Code extension : https://www.digitalocean.com/community/tutorials/how-to-format-code-with-prettier-in-visual-studio-code
 
 #### PRODUCTION
 

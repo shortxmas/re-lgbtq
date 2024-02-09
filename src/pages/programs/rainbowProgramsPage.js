@@ -9,7 +9,7 @@ export const RainbowProgramsPage = () => {
       <Navbar />
       <div
         className="container text-left"
-        style={{ fontFamily: "Poppins", paddingTop: 115 }}
+        style={{ fontFamily: "Poppins", paddingTop: 140 }}
       >
         <div className="my-4">
           <h2 className="fw-bold">RAINBOW PROGRAMS</h2>

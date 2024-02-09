@@ -274,7 +274,7 @@ export const ResourcesPage = () => {
           </div>
 
           <div className="my-4">
-            <h4>National Resources</h4>
+            <h4>LGBTQ+ Helplines</h4>
             <div className="my-1">
               <span className="fw-bold">The Trevor Project</span>
               <br></br>

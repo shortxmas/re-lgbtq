@@ -8,13 +8,13 @@ export const ContactPage = () => {
     <>
       <Navbar />
   
-      <div className="container" style={{paddingTop: 100, paddingBottom: 100}}>
+      <div className="container" style={{paddingTop: 100, fontFamily: "Poppins"}}>
         <div className="row justify-content-center">
           <div className="col text-center">
-            <div className="card">
+            <div className="card my-5 " >
               <div className="card-body">
-                <h1>Contact Us</h1>
-                <form action="https://api.backendform.com/sendform/emailhere" method="post">
+                <h2 className="f">Contact Us</h2>
+                <form action="https://api.backendform.com/sendform/lgbtq@hawaii.edu" method="post">
                 <input 
                   className="contact-text" 
                   placeholder="Your Name" 
@@ -30,6 +30,7 @@ export const ContactPage = () => {
                     fontSize: "medium",
                     padding: 10
                   }} 
+                  required
                   />
                 <br/>
                 <input 
@@ -47,6 +48,7 @@ export const ContactPage = () => {
                     fontSize: "medium",
                     padding: 10
                   }}
+                  required
                   />
                 <br/>
                 <textarea 
@@ -63,7 +65,9 @@ export const ContactPage = () => {
                     borderRadius: 8,
                     fontSize: "medium",
                     padding: 10
-                    }}/>
+                    }}
+                    required
+                    />
                 <br/>
                 <button className="btn text-white" type="submit" style={{backgroundColor: "#2C4230", height: 45, width: 120, marginTop:35, borderRadius: 60}}> Submit </button>
                 <input hidden type="text" name="from" value="LGBTQ+ Website"></input>

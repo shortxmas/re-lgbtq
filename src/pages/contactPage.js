@@ -8,10 +8,10 @@ export const ContactPage = () => {
     <>
       <Navbar />
   
-      <div className="container" style={{paddingTop: 100, fontFamily: "Poppins"}}>
-        <div className="row justify-content-center">
-          <div className="col text-center">
-            <div className="card my-5 " >
+      <div className="container mb-5" style={{paddingTop: 100, fontFamily: "Poppins"}}>
+        <div className="row justify-content-center align-center my-5">
+          <div className="col-12 col-lg-8 text-center">
+            <div className="card" >
               <div className="card-body">
                 <h2 className="f">Contact Us</h2>
                 <form action="https://api.backendform.com/sendform/lgbtq@hawaii.edu" method="post">
@@ -76,7 +76,32 @@ export const ContactPage = () => {
               </div>
             </div>
           </div>
+          
         </div>
+        
+        <div className="row d-flex justify-content-center align-middle ">
+
+            <div className="col-12 col-lg-4 d-flex py-2" style={{}}>
+             <img
+                src="../../assets/cam.png"
+                class="img-fluid border"
+                alt="..."
+
+              ></img>
+            </div>
+
+            <div className="col-12 col-lg-4 d-flex py-2 justify-content-center" style={{alignItems:'center' ,}}>
+              <div className="text-start" >
+                <h3> Camoran Miyamoto</h3>
+                <h5>Director</h5>
+                <p>lgbtq@hawaii.edu</p>
+              </div>
+            </div>
+
+        </div>
+
+
+
       </div>
 
    

@@ -22,7 +22,7 @@ export const ContactPage = () => {
                   name="name"
                   style={{
                     marginTop: 25,
-                    width: "80%",
+                    width: "90%",
                     height: 45,
                     backgroundColor: "#e8e8e8",
                     border: "none",
@@ -40,7 +40,7 @@ export const ContactPage = () => {
                   name="email"
                   style={{
                     marginTop: 25,
-                    width: "80%",
+                    width: "90%",
                     height: 45,
                     backgroundColor: "#e8e8e8",
                     border: "none",
@@ -59,7 +59,7 @@ export const ContactPage = () => {
                     height:150, 
                     paddingBottom:115,
                     marginTop: 25,
-                    width: "80%",
+                    width: "90%",
                     backgroundColor: "#e8e8e8",
                     border: "none",
                     borderRadius: 8,

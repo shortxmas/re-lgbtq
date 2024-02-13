@@ -4,11 +4,107 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
 export const HomePage = () => {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
+  const [carouselData,setCarouselData] = useState()
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
 
-  return (
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://lgbtq-center-portal.vercel.app/api/carousel/');
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const jsonData = await response.json();
+        console.log(jsonData[0].image_url)
+        setCarouselData(jsonData);
+        
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+
+  }, []);
+
+  const renderCarouselButtons = ()=>{
+    let ret=[]
+     for(var i=0;i<carouselData.length-1;i++){
+
+      ret.push(
+        <>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            className="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </>
+      )
+      
+    };
+  }
+
+  const renderCarousel = ()=>{
+    console.log(carouselData)
+
+    let imageArray=[]
+
+    imageArray.push(
+    <div className="carousel-item active" data-bs-interval="3500">
+        <img
+          src={carouselData[0].image_url}
+          className="d-block w-100 "
+          alt="..."
+        ></img>
+        <div className="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+        </div>
+      </div>
+    )
+    for(let i=1;i<carouselData.length;i++){
+      imageArray.push(
+        <div className="carousel-item" data-bs-interval="3500">
+          <img
+            src={carouselData[i].image_url}
+            className="d-block w-100 "
+            alt="..."
+          ></img>
+          <div className="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>
+              Some representative placeholder content for the first slide.
+            </p>
+          </div>
+        </div>
+      )  
+    }
+
+    return imageArray
+
+  }
+
+  
+  return loading ? (
+    <div>
+      hi
+    </div>
+    
+  ):(
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link
@@ -31,29 +127,23 @@ export const HomePage = () => {
       >
         <div
           id="carouselExampleCaptions"
-          className="carousel slide w-100 my-4"
+          className="carousel carousel-dark slide w-100 my-4"
           data-bs-ride="carousel"
         >
           <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              className="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
+
+
+            
+
+
           </div>
+
           <div className="carousel-inner">
-            <div className="carousel-item active" data-bs-interval="3500">
+
+            {renderCarousel()}
+            {/* <div className="carousel-item  active" data-bs-interval="3500">
               <img
-                src="../../assets/manoa_pride_image_1.png"
+                src="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2F1602117384175.png"
                 className="d-block w-100 "
                 alt="..."
               ></img>
@@ -64,9 +154,10 @@ export const HomePage = () => {
                 </p>
               </div>
             </div>
+
             <div className="carousel-item" data-bs-interval="3500">
               <img
-                src="../../assets/manoa_pride_image_2.png"
+                src="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2FIMG_4640_yRFmWtk.png"
                 className="d-block w-100 "
                 alt="..."
               ></img>
@@ -76,8 +167,12 @@ export const HomePage = () => {
                   Some representative placeholder content for the second slide.
                 </p>
               </div>
-            </div>
+            </div> */}
+
+
           </div>
+
+
           <button
             className="carousel-control-prev"
             type="button"
@@ -142,5 +237,5 @@ export const HomePage = () => {
 
       <Footer />
     </>
-  );
+  )
 };

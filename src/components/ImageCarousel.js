@@ -38,9 +38,9 @@ export const ImageCarousel = (props) => {
               }}
             ></img>
             <div className="carousel-caption d-none d-md-block">
-              <h5 className="text-white">First slide label</h5>
+              <h5 className="text-white">{carouselData[i].label}</h5>
               <p className="text-white">
-                Some representative placeholder content for the first slide.
+                {carouselData[i].description}
               </p>
             </div>
           </div>
@@ -54,9 +54,9 @@ export const ImageCarousel = (props) => {
               alt="..."
             ></img>
             <div className="carousel-caption d-none d-md-block">
-              <h5 className="text-white">First slide label</h5>
+              <h5 className="text-white">{carouselData[i].label}</h5>
               <p className="text-white">
-                Some representative placeholder content for the first slide.
+              {carouselData[i].description}
               </p>
             </div>
           </div>

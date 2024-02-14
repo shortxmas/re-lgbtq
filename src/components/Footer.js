@@ -16,6 +16,9 @@ export const Footer = () => {
         const jsonData = await response.json();
 
         setFooterData(jsonData[0]);
+
+
+        
       } catch (error) {
         setError(error);
       } finally {
@@ -26,7 +29,74 @@ export const Footer = () => {
     fetchData();
   }, []);
 
-  console.log(footerData);
+
+  const renderSocialMedias = () =>{
+    let socialMedias = []
+    for(var i = 0;i<footerData.social_medias.length;i++){
+      console.log(footerData.social_medias[i].social_media)
+      switch(footerData.social_medias[i].social_media){
+        case "instagram":
+          socialMedias.push(
+            <a
+              href={footerData.social_medias[i].link}
+              target="_blank"
+              className="text-white me-4"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+          )
+          break
+        case "twitter":
+          socialMedias.push(
+            <a
+              href={footerData.social_medias[i].link}
+              target="_blank"
+              className="text-white me-4"
+            >
+              <i className="fab fa-twitter"></i>
+            </a>
+          )
+          break
+        case "linkedIn":
+          socialMedias.push(
+            <a
+              href={footerData.social_medias[i].link}
+              target="_blank"
+              className="text-white me-4"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+          )
+          break
+        case "discord":
+          socialMedias.push(
+            <a
+              href={footerData.social_medias[i].link}
+              target="_blank"
+              className="text-white me-4"
+            >
+              <i className="fab fa-discord"></i>
+            </a>
+          )
+          break
+        case "facebook":
+          socialMedias.push(
+            <a
+              href={footerData.social_medias[i].link}
+              target="_blank"
+              className="text-white me-4"
+            >
+              <i className="fab fa-facebook"></i>
+            </a>
+          )
+          break
+      }
+      
+    }
+    return socialMedias
+  }
+
+ 
 
   return (
     <>
@@ -47,15 +117,18 @@ export const Footer = () => {
           </div>
 
           <div>
-            <a
+            {loading ? "" : renderSocialMedias()}
+            {/* <a
               href="https://www.instagram.com/uhmlgbtqcenter/"
               target="_blank"
               className="text-white me-4"
             >
               <i className="fab fa-instagram"></i>
-            </a>
+            </a> */}
           </div>
         </section>
+        <div>
+        </div>
 
         <section className="">
           <div className="container text-center text-md-start mt-5">

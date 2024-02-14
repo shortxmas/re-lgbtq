@@ -1,0 +1,1 @@
+export const rootUrl = "https://lgbtq-center-portal.vercel.app/api/";

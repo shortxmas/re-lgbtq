@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { ImageCarousel } from "../components/ImageCarousel";
+import { rootUrl } from "../urls";
 
 export const HomePage = () => {
   const [carouselData, setCarouselData] = useState();
@@ -12,13 +13,13 @@ export const HomePage = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://lgbtq-center-portal.vercel.app/api/carousel/"
+          rootUrl+"carousel/"
         );
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
         const jsonData = await response.json();
-        
+
         setCarouselData(jsonData);
       } catch (error) {
         setError(error);
@@ -30,12 +31,11 @@ export const HomePage = () => {
     fetchData();
   }, []);
 
-  
-
-
-
   return loading ? (
-    <div className="container d-flex justify-content-center" style={{height:500,alignItems:'center' }}>
+    <div
+      className="container d-flex justify-content-center"
+      style={{ height: 500, alignItems: "center" }}
+    >
       <div class="spinner-border text-secondary" role="status"></div>
     </div>
   ) : (
@@ -51,7 +51,7 @@ export const HomePage = () => {
         rel="stylesheet"
       ></link>
 
-      <Navbar/>
+      <Navbar />
 
       <div
         className="d-flex container justify-content-center  flex-column"
@@ -59,7 +59,7 @@ export const HomePage = () => {
           paddingTop: 100,
         }}
       >
-        <ImageCarousel data={carouselData}/>
+        <ImageCarousel data={carouselData} />
 
         <div className="text-left my-4 " style={{ fontFamily: "Poppins" }}>
           {/* <div className='text-left my-4 'style={{fontFamily:'Poppins'}} data-sal="slide-down" data-sal-duration="1200"> */}

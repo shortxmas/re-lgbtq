@@ -13,7 +13,7 @@ export const HomePage = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          rootUrl+"carousel/"
+          rootUrl+ "carousel/"
         );
         if (!response.ok) {
           throw new Error("Failed to fetch data");

@@ -39,9 +39,7 @@ export const ImageCarousel = (props) => {
             ></img>
             <div className="carousel-caption d-none d-md-block">
               <h5 className="text-white">{carouselData[i].label}</h5>
-              <p className="text-white">
-                {carouselData[i].description}
-              </p>
+              <p className="text-white">{carouselData[i].description}</p>
             </div>
           </div>
         );
@@ -55,9 +53,7 @@ export const ImageCarousel = (props) => {
             ></img>
             <div className="carousel-caption d-none d-md-block">
               <h5 className="text-white">{carouselData[i].label}</h5>
-              <p className="text-white">
-              {carouselData[i].description}
-              </p>
+              <p className="text-white">{carouselData[i].description}</p>
             </div>
           </div>
         );

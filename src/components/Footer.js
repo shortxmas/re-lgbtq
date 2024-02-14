@@ -16,9 +16,6 @@ export const Footer = () => {
         const jsonData = await response.json();
 
         setFooterData(jsonData[0]);
-
-
-        
       } catch (error) {
         setError(error);
       } finally {
@@ -29,12 +26,11 @@ export const Footer = () => {
     fetchData();
   }, []);
 
-
-  const renderSocialMedias = () =>{
-    let socialMedias = []
-    for(var i = 0;i<footerData.social_medias.length;i++){
-      console.log(footerData.social_medias[i].social_media)
-      switch(footerData.social_medias[i].social_media){
+  const renderSocialMedias = () => {
+    let socialMedias = [];
+    for (var i = 0; i < footerData.social_medias.length; i++) {
+      console.log(footerData.social_medias[i].social_media);
+      switch (footerData.social_medias[i].social_media) {
         case "instagram":
           socialMedias.push(
             <a
@@ -44,8 +40,8 @@ export const Footer = () => {
             >
               <i className="fab fa-instagram"></i>
             </a>
-          )
-          break
+          );
+          break;
         case "twitter":
           socialMedias.push(
             <a
@@ -55,8 +51,8 @@ export const Footer = () => {
             >
               <i className="fab fa-twitter"></i>
             </a>
-          )
-          break
+          );
+          break;
         case "linkedIn":
           socialMedias.push(
             <a
@@ -66,8 +62,8 @@ export const Footer = () => {
             >
               <i className="fab fa-linkedin"></i>
             </a>
-          )
-          break
+          );
+          break;
         case "discord":
           socialMedias.push(
             <a
@@ -77,8 +73,8 @@ export const Footer = () => {
             >
               <i className="fab fa-discord"></i>
             </a>
-          )
-          break
+          );
+          break;
         case "facebook":
           socialMedias.push(
             <a
@@ -88,15 +84,12 @@ export const Footer = () => {
             >
               <i className="fab fa-facebook"></i>
             </a>
-          )
-          break
+          );
+          break;
       }
-      
     }
-    return socialMedias
-  }
-
- 
+    return socialMedias;
+  };
 
   return (
     <>
@@ -127,8 +120,7 @@ export const Footer = () => {
             </a> */}
           </div>
         </section>
-        <div>
-        </div>
+        <div></div>
 
         <section className="">
           <div className="container text-center text-md-start mt-5">

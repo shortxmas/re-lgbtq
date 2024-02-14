@@ -1,7 +1,38 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import { rootUrl } from "../urls";
 
 export const Footer = () => {
+
+  const [footerData, setFooterData] = useState();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          rootUrl+ "footer/"
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const jsonData = await response.json();
+
+        setFooterData(jsonData[0]);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+
+    
+  }, []);
+
+  console.log(footerData)
+
   return (
     <>
       <link
@@ -72,10 +103,13 @@ export const Footer = () => {
                   style={{ width: 60, height: 2, backgroundColor: "#7c4dff" }}
                 />
                 <p>
-                  <i className="fa fa-home mr-3"></i> University of Hawai&#699;i
+                  <i className="fa fa-home mr-3"></i> 
+                  {loading ?(
+                    "..."
+                  ):(" "+ footerData.address)}
                 </p>
-                <p>2600 Campus Rd., QLCSS #211</p>
-                <p>Honolulu, HI 96822, US</p>
+                <p></p>
+                <p></p>
               </div>
 
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
@@ -85,18 +119,27 @@ export const Footer = () => {
                   style={{ width: 60, height: 2, backgroundColor: "#7c4dff" }}
                 />
                 <p>
-                  <i className="fa fa-envelope mr-3"></i> lgbtq@hawaii.edu
+                  <i className="fa fa-envelope mr-3"></i> 
+                  {loading ?(
+                    "..."
+                  ):(" "+ footerData.contact_email)}
                 </p>
                 <p>
-                  <i className="fa fa-phone mr-3"></i> + 1 (808) 956-9250
+                  <i className="fa fa-phone mr-3"></i> {loading ?(
+                    "..."
+                  ):(" "+ footerData.contact_phone_number)}
                 </p>
               </div>
             </div>
           </div>
         </section>
         <div className="text-center p-3" style={{ backgroundColor: "#2C4230" }}>
-          ©2018-{new Date().getFullYear().toString().slice(-2)} University of
-          Hawai&#699;i · Page last modified: January 14, 2024
+          ©{loading ?(
+                    "..."
+                  ):(" "+ footerData.copyright_year)} University of
+          Hawai&#699;i · Page last modified: {loading ?(
+                    "..."
+                  ):(" "+ footerData.page_last_updated)}
         </div>
       </footer>
     </>

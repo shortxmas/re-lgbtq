@@ -3,16 +3,13 @@ import ReactDOM from "react-dom";
 import { rootUrl } from "../urls";
 
 export const Footer = () => {
-
   const [footerData, setFooterData] = useState();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          rootUrl+ "footer/"
-        );
+        const response = await fetch(rootUrl + "footer/");
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
@@ -27,11 +24,9 @@ export const Footer = () => {
     };
 
     fetchData();
-
-    
   }, []);
 
-  console.log(footerData)
+  console.log(footerData);
 
   return (
     <>
@@ -103,10 +98,8 @@ export const Footer = () => {
                   style={{ width: 60, height: 2, backgroundColor: "#7c4dff" }}
                 />
                 <p>
-                  <i className="fa fa-home mr-3"></i> 
-                  {loading ?(
-                    "..."
-                  ):(" "+ footerData.address)}
+                  <i className="fa fa-home mr-3"></i>
+                  {loading ? "..." : " " + footerData.address}
                 </p>
                 <p></p>
                 <p></p>
@@ -119,27 +112,21 @@ export const Footer = () => {
                   style={{ width: 60, height: 2, backgroundColor: "#7c4dff" }}
                 />
                 <p>
-                  <i className="fa fa-envelope mr-3"></i> 
-                  {loading ?(
-                    "..."
-                  ):(" "+ footerData.contact_email)}
+                  <i className="fa fa-envelope mr-3"></i>
+                  {loading ? "..." : " " + footerData.contact_email}
                 </p>
                 <p>
-                  <i className="fa fa-phone mr-3"></i> {loading ?(
-                    "..."
-                  ):(" "+ footerData.contact_phone_number)}
+                  <i className="fa fa-phone mr-3"></i>{" "}
+                  {loading ? "..." : " " + footerData.contact_phone_number}
                 </p>
               </div>
             </div>
           </div>
         </section>
         <div className="text-center p-3" style={{ backgroundColor: "#2C4230" }}>
-          ©{loading ?(
-                    "..."
-                  ):(" "+ footerData.copyright_year)} University of
-          Hawai&#699;i · Page last modified: {loading ?(
-                    "..."
-                  ):(" "+ footerData.page_last_updated)}
+          ©{loading ? "..." : " " + footerData.copyright_year} University of
+          Hawai&#699;i · Page last modified:{" "}
+          {loading ? "..." : " " + footerData.page_last_updated}
         </div>
       </footer>
     </>

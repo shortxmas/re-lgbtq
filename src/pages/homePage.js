@@ -2,23 +2,24 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { ImageCarousel } from "../components/ImageCarousel";
 
 export const HomePage = () => {
-  const [carouselData,setCarouselData] = useState()
+  const [carouselData, setCarouselData] = useState();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-
     const fetchData = async () => {
       try {
-        const response = await fetch('https://lgbtq-center-portal.vercel.app/api/carousel/');
+        const response = await fetch(
+          "https://lgbtq-center-portal.vercel.app/api/carousel/"
+        );
         if (!response.ok) {
-          throw new Error('Failed to fetch data');
+          throw new Error("Failed to fetch data");
         }
         const jsonData = await response.json();
-        console.log(jsonData[0].image_url)
-        setCarouselData(jsonData);
         
+        setCarouselData(jsonData);
       } catch (error) {
         setError(error);
       } finally {
@@ -27,84 +28,17 @@ export const HomePage = () => {
     };
 
     fetchData();
-
   }, []);
 
-  const renderCarouselButtons = ()=>{
-    let ret=[]
-     for(var i=0;i<carouselData.length-1;i++){
-
-      ret.push(
-        <>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-        </>
-      )
-      
-    };
-  }
-
-  const renderCarousel = ()=>{
-    console.log(carouselData)
-
-    let imageArray=[]
-
-    imageArray.push(
-    <div className="carousel-item active" data-bs-interval="3500">
-        <img
-          src={carouselData[0].image_url}
-          className="d-block w-100 "
-          alt="..."
-        ></img>
-        <div className="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>
-            Some representative placeholder content for the first slide.
-          </p>
-        </div>
-      </div>
-    )
-    for(let i=1;i<carouselData.length;i++){
-      imageArray.push(
-        <div className="carousel-item" data-bs-interval="3500">
-          <img
-            src={carouselData[i].image_url}
-            className="d-block w-100 "
-            alt="..."
-          ></img>
-          <div className="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-          </div>
-        </div>
-      )  
-    }
-
-    return imageArray
-
-  }
-
   
+
+
+
   return loading ? (
-    <div>
-      hi
+    <div className="container d-flex justify-content-center" style={{height:500,alignItems:'center' }}>
+      <div class="spinner-border text-secondary" role="status"></div>
     </div>
-    
-  ):(
+  ) : (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link
@@ -117,7 +51,7 @@ export const HomePage = () => {
         rel="stylesheet"
       ></link>
 
-      <Navbar />
+      <Navbar/>
 
       <div
         className="d-flex container justify-content-center  flex-column"
@@ -125,79 +59,7 @@ export const HomePage = () => {
           paddingTop: 100,
         }}
       >
-        <div
-          id="carouselExampleCaptions"
-          className="carousel carousel-dark slide w-100 my-4"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-indicators">
-
-
-            
-
-
-          </div>
-
-          <div className="carousel-inner">
-
-            {renderCarousel()}
-            {/* <div className="carousel-item  active" data-bs-interval="3500">
-              <img
-                src="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2F1602117384175.png"
-                className="d-block w-100 "
-                alt="..."
-              ></img>
-              <div className="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-
-            <div className="carousel-item" data-bs-interval="3500">
-              <img
-                src="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2FIMG_4640_yRFmWtk.png"
-                className="d-block w-100 "
-                alt="..."
-              ></img>
-              <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
-              </div>
-            </div> */}
-
-
-          </div>
-
-
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
+        <ImageCarousel data={carouselData}/>
 
         <div className="text-left my-4 " style={{ fontFamily: "Poppins" }}>
           {/* <div className='text-left my-4 'style={{fontFamily:'Poppins'}} data-sal="slide-down" data-sal-duration="1200"> */}
@@ -237,5 +99,5 @@ export const HomePage = () => {
 
       <Footer />
     </>
-  )
+  );
 };

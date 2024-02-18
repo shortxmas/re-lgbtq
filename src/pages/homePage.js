@@ -60,6 +60,7 @@ export const HomePage = () => {
             The LGBTQ+ Center Lounge is open during regular business hours.
             Reservations are not required.
           </p>
+          <hr></hr>
           <h3 className="fw-bold">PURPOSE</h3>
           <p>
             Lesbian, Gay, Bisexual, Transgender & Queer+ (LGBTQ+) Center works

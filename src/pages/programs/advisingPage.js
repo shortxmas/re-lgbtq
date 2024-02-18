@@ -35,6 +35,7 @@ export const AdvisingPage = () => {
         <div className="my-4">
           <h2 className="fw-bold">ADVISING</h2>
         </div>
+        <hr></hr>
         <p>
           Our center is open to provide you with assistance via Zoom, in-person,
           or over the phone, Monday-Friday from 9:00 am-5:00 pm.

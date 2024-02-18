@@ -37,7 +37,7 @@ export const RainbowProgramsPage = () => {
         <div className="my-4">
           <h2 className="fw-bold">RAINBOW PROGRAMS</h2>
         </div>
-
+        <hr></hr>
         <div className="my-4">
           <h4>Rainbow ʻOhana Program</h4>
           <p>
@@ -71,7 +71,7 @@ export const RainbowProgramsPage = () => {
             </div>
           </div>
         </div>
-
+        <hr></hr>
         <div className="my-4">
           <h4>Rainbow Graduation</h4>
           <p>
@@ -88,7 +88,7 @@ export const RainbowProgramsPage = () => {
             LGBTQ@hawaii.edu
           </p>
         </div>
-
+        <hr></hr>
         <div className="my-4">
           <h4>Safe Zone Training : LGBTQ+ Safety and Inclusion</h4>
           <p>

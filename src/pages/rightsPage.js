@@ -33,7 +33,10 @@ export const RightsPage = () => {
       <div className="container" style={{ paddingTop: 100 }}>
         <div className="text-left my-4 " style={{ fontFamily: "Poppins" }}>
           {/* <div className='text-left my-4 'style={{fontFamily:'Poppins'}} data-sal="slide-down" data-sal-duration="1200"> */}
-          <h2 className="fw-bold">RIGHTS</h2>
+          <div className="my-4">
+            <h2 className="fw-bold">RIGHTS</h2>
+          </div>
+          <hr></hr>
           <p>
             Please reach out if you feel your right have experienced harassment
             or discrimination. You have protections against being misgendered,
@@ -44,7 +47,7 @@ export const RightsPage = () => {
           <p>For confidential advocacy: manoaadv@hawaii.edu</p>
           <p>To file a complaint/grievance: t9uhm@hawaii.edu</p>
         </div>
-
+        <hr></hr>
         <div className="text-left my-4 " style={{ fontFamily: "Poppins" }}>
           <h4>We have 20 All-Gender Restrooms at UH Mānoa</h4>
           <p>
@@ -71,7 +74,7 @@ export const RightsPage = () => {
             </p>
           </a>
         </div>
-
+        <hr></hr>
         <div className="text-left my-4 " style={{ fontFamily: "Poppins" }}>
           <h4>Changing Your Name in UH Records</h4>
           <div class="ratio ratio-4x3 my-3 border">
@@ -85,7 +88,7 @@ export const RightsPage = () => {
           </a>
           (PDF)*
         </div>
-
+        <hr></hr>
         <div className="text-left my-4 " style={{ fontFamily: "Poppins" }}>
           <h4>Additional Policies</h4>
           <a href="https://www.hawaii.edu/titleix/documents/11083/">

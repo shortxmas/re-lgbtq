@@ -37,7 +37,7 @@ export const EventsPage = () => {
         <div className="my-4">
           <h2 className="fw-bold">EVENTS</h2>
         </div>
-
+        <hr></hr>
         <div className="my-4">
           <h4>Weekly LGBTQ+ Coffee Hour</h4>
           <p>
@@ -62,7 +62,7 @@ export const EventsPage = () => {
             </div>
           </div>
         </div>
-
+        <hr></hr>
         <div className="my-4">
           <h4>Educational Events and Programs</h4>
           <p>

@@ -36,10 +36,8 @@ export const ResourcesPage = () => {
         <div className="my-4">
           <h2 className="fw-bold">RESOURCES</h2>
         </div>
-
+        <hr></hr>
         <div>
-          <h3> Relevant National/Community/Campus Links and Phone Numbers</h3>
-
           <div className="my-4">
             <h4>UH Campus</h4>
             <div className="my-1">
@@ -85,7 +83,7 @@ export const ResourcesPage = () => {
               <br></br>
             </div>
           </div>
-
+          <hr></hr>
           <div className="my-4">
             <h4>University of Hawaiʻi System</h4>
             <div className="my-1">
@@ -100,7 +98,7 @@ export const ResourcesPage = () => {
               <br></br>
             </div>
           </div>
-
+          <hr></hr>
           <div className="my-4">
             <h4>Hawaiʻi Community</h4>
             <div className="my-1">
@@ -205,7 +203,7 @@ export const ResourcesPage = () => {
               <br></br>
             </div>
           </div>
-
+          <hr></hr>
           <div className="my-4">
             <h4>National Resources</h4>
             <div className="my-1">
@@ -283,7 +281,7 @@ export const ResourcesPage = () => {
               <br></br>
             </div>
           </div>
-
+          <hr></hr>
           <div className="my-4">
             <h4>LGBTQ+ Helplines</h4>
             <div className="my-1">

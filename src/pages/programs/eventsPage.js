@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
+import { LoadingImage } from "../../components/LoadingImage";
 
 export const EventsPage = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -48,18 +49,16 @@ export const EventsPage = () => {
           </p>
           <div className="row">
             <div class="col-md">
-              <img
-                src="../../assets/Coffee_Hour_1.png"
+              <LoadingImage
+                uri="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2FCoffee_Hour_1-min.webp"
                 class="img-fluid"
-                alt="..."
-              ></img>
+              />
             </div>
             <div class="col-md">
-              <img
-                src="../../assets/Coffee_Hour_2.png"
+              <LoadingImage
+                uri="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2FCoffee_Hour_2-min.webp"
                 class="img-fluid"
-                alt="..."
-              ></img>
+              />
             </div>
           </div>
         </div>

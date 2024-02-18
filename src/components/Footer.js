@@ -28,15 +28,18 @@ export const Footer = () => {
 
   const renderSocialMedias = () => {
     let socialMedias = [];
-    for (var i = 0; i < footerData.social_medias.length; i++) {
-      console.log(footerData.social_medias[i].social_media);
-      switch (footerData.social_medias[i].social_media) {
+    
+    
+    footerData.social_medias.forEach((k,v)=>{
+      console.log(footerData.social_medias[v].social_media);
+      switch (footerData.social_medias[v].social_media) {
         case "instagram":
           socialMedias.push(
             <a
-              href={footerData.social_medias[i].link}
+              href={footerData.social_medias[v].link}
               target="_blank"
               className="text-white me-4"
+              key={footerData.social_medias[v].social_media}
             >
               <i className="fab fa-instagram"></i>
             </a>
@@ -45,9 +48,10 @@ export const Footer = () => {
         case "twitter":
           socialMedias.push(
             <a
-              href={footerData.social_medias[i].link}
+              href={footerData.social_medias[v].link}
               target="_blank"
               className="text-white me-4"
+              key={footerData.social_medias[v].social_media}
             >
               <i className="fab fa-twitter"></i>
             </a>
@@ -56,9 +60,10 @@ export const Footer = () => {
         case "linkedIn":
           socialMedias.push(
             <a
-              href={footerData.social_medias[i].link}
+              href={footerData.social_medias[v].link}
               target="_blank"
               className="text-white me-4"
+              key={footerData.social_medias[v].social_media}
             >
               <i className="fab fa-linkedin"></i>
             </a>
@@ -67,9 +72,10 @@ export const Footer = () => {
         case "discord":
           socialMedias.push(
             <a
-              href={footerData.social_medias[i].link}
+              href={footerData.social_medias[v].link}
               target="_blank"
               className="text-white me-4"
+              key={footerData.social_medias[v].social_media}
             >
               <i className="fab fa-discord"></i>
             </a>
@@ -78,16 +84,17 @@ export const Footer = () => {
         case "facebook":
           socialMedias.push(
             <a
-              href={footerData.social_medias[i].link}
+              href={footerData.social_medias[v].link}
               target="_blank"
               className="text-white me-4"
+              key={footerData.social_medias[v].social_media}
             >
               <i className="fab fa-facebook"></i>
             </a>
           );
           break;
       }
-    }
+    })
     return socialMedias;
   };
 
@@ -111,13 +118,6 @@ export const Footer = () => {
 
           <div>
             {loading ? "" : renderSocialMedias()}
-            {/* <a
-              href="https://www.instagram.com/uhmlgbtqcenter/"
-              target="_blank"
-              className="text-white me-4"
-            >
-              <i className="fab fa-instagram"></i>
-            </a> */}
           </div>
         </section>
         <div></div>

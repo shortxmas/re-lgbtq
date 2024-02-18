@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { ContactPageMembers } from "../components/ContactPageMembers";
 
 export const ContactPage = () => {
   return (
@@ -94,40 +95,20 @@ export const ContactPage = () => {
                     hidden
                     type="text"
                     name="from"
-                    value="LGBTQ+ Website"
+                    defaultValue="LGBTQ+ Website"
                   ></input>
                   <input
                     hidden
                     type="text"
                     name="redirect"
-                    value="http://localhost:3000/"
+                    defaultValue="http://localhost:3000/"
                   ></input>
                 </form>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="row d-flex justify-content-center align-middle my-2">
-          <div className="col-12 col-lg-4 d-flex py-2 px-5" style={{}}>
-            <img
-              src="../../assets/cam.png"
-              class="img-fluid border"
-              alt="..."
-            ></img>
-          </div>
-
-          <div
-            className="col-12 col-lg-4 d-flex py-2 justify-content-center"
-            style={{ alignItems: "center" }}
-          >
-            <div className="text-start">
-              <h3> Camoran Miyamoto</h3>
-              <h5>Director</h5>
-              <p>lgbtq@hawaii.edu</p>
-            </div>
-          </div>
-        </div>
+        <ContactPageMembers />
       </div>
 
       <Footer />

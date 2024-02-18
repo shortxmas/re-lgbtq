@@ -108,8 +108,8 @@ export const ContactPage = () => {
           </div>
         </div>
 
-        <div className="row d-flex justify-content-center align-middle ">
-          <div className="col-12 col-md-4 d-flex py-2" style={{}}>
+        <div className="row d-flex justify-content-center align-middle my-2">
+          <div className="col-12 col-lg-4 d-flex py-2 px-5" style={{}}>
             <img
               src="../../assets/cam.png"
               class="img-fluid border"
@@ -118,7 +118,7 @@ export const ContactPage = () => {
           </div>
 
           <div
-            className="col-12 col-md-4 d-flex py-2 justify-content-center"
+            className="col-12 col-lg-4 d-flex py-2 justify-content-center"
             style={{ alignItems: "center" }}
           >
             <div className="text-start">

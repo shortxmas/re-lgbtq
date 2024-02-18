@@ -28,6 +28,7 @@ export const ImageCarousel = (props) => {
         imageArray.push(
           <div className="carousel-item active" data-bs-interval="3500">
             <img
+              rel="preload"
               src={carouselData[i].image_url}
               className="d-block w-100 "
               alt="..."
@@ -47,6 +48,7 @@ export const ImageCarousel = (props) => {
         imageArray.push(
           <div className="carousel-item" data-bs-interval="3500">
             <img
+              rel="preload"
               src={carouselData[i].image_url}
               className="d-block w-100 "
               alt="..."

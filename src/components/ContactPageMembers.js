@@ -44,7 +44,7 @@ export const ContactPageMembers = () => {
               className="col-12 col-lg-4 d-flex py-2 justify-content-center px-5"
               style={{}}
             >
-              <LoadingImage uri={member.image} />
+              <LoadingImage class="img-fluid border" uri={member.image} />
             </div>
 
             <div

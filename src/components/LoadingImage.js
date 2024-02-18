@@ -14,7 +14,7 @@ export const LoadingImage = (props) => {
       <img
         style={imageStyle}
         src={props.uri}
-        className="img-fluid border"
+        className={props.class}
         alt="..."
         onLoad={() => {
           changeImageStyle();

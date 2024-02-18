@@ -4,19 +4,30 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
 export const ResourcesPage = () => {
-  return (
-    <>
-      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="true"
-      ></link>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
-        rel="stylesheet"
-      ></link>
+  const [fontsLoaded, setFontsLoaded] = useState(false);
 
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap";
+    link.rel = "stylesheet";
+
+    // Use a callback to ensure the fonts are loaded
+    link.onload = () => {
+      setFontsLoaded(true);
+    };
+
+    // Append the link to the document head
+    document.head.appendChild(link);
+
+    // Cleanup function
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
+  return fontsLoaded ? (
+    <>
       <Navbar />
       <div
         className="container text-left "
@@ -311,5 +322,9 @@ export const ResourcesPage = () => {
 
       <Footer />
     </>
+  ) : (
+    <div className="d-flex justify-content-center ">
+      <div className="spinner-border my-5"></div>
+    </div>
   );
 };

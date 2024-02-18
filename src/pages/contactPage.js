@@ -2,9 +2,32 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { ContactPageMembers } from "../components/ContactPageMembers";
 
 export const ContactPage = () => {
-  return (
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap";
+    link.rel = "stylesheet";
+
+    // Use a callback to ensure the fonts are loaded
+    link.onload = () => {
+      setFontsLoaded(true);
+    };
+
+    // Append the link to the document head
+    document.head.appendChild(link);
+
+    // Cleanup function
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
+  return fontsLoaded ? (
     <>
       <Navbar />
 
@@ -94,43 +117,27 @@ export const ContactPage = () => {
                     hidden
                     type="text"
                     name="from"
-                    value="LGBTQ+ Website"
+                    defaultValue="LGBTQ+ Website"
                   ></input>
                   <input
                     hidden
                     type="text"
                     name="redirect"
-                    value="http://localhost:3000/"
+                    defaultValue="http://localhost:3000/"
                   ></input>
                 </form>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="row d-flex justify-content-center align-middle ">
-          <div className="col-12 col-md-4 d-flex py-2" style={{}}>
-            <img
-              src="../../assets/cam.png"
-              class="img-fluid border"
-              alt="..."
-            ></img>
-          </div>
-
-          <div
-            className="col-12 col-md-4 d-flex py-2 justify-content-center"
-            style={{ alignItems: "center" }}
-          >
-            <div className="text-start">
-              <h3> Camoran Miyamoto</h3>
-              <h5>Director</h5>
-              <p>lgbtq@hawaii.edu</p>
-            </div>
-          </div>
-        </div>
+        <ContactPageMembers />
       </div>
 
       <Footer />
     </>
+  ) : (
+    <div className="d-flex justify-content-center ">
+      <div className="spinner-border my-5"></div>
+    </div>
   );
 };

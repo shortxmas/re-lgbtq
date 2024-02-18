@@ -2,9 +2,32 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
+import { LoadingImage } from "../../components/LoadingImage";
 
 export const EventsPage = () => {
-  return (
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap";
+    link.rel = "stylesheet";
+
+    // Use a callback to ensure the fonts are loaded
+    link.onload = () => {
+      setFontsLoaded(true);
+    };
+
+    // Append the link to the document head
+    document.head.appendChild(link);
+
+    // Cleanup function
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
+  return fontsLoaded ? (
     <>
       <Navbar />
       <div
@@ -26,18 +49,16 @@ export const EventsPage = () => {
           </p>
           <div className="row">
             <div class="col-md">
-              <img
-                src="../../assets/Coffee_Hour_1.png"
+              <LoadingImage
+                uri="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2FCoffee_Hour_1-min.webp"
                 class="img-fluid"
-                alt="..."
-              ></img>
+              />
             </div>
             <div class="col-md">
-              <img
-                src="../../assets/Coffee_Hour_2.png"
+              <LoadingImage
+                uri="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2FCoffee_Hour_2-min.webp"
                 class="img-fluid"
-                alt="..."
-              ></img>
+              />
             </div>
           </div>
         </div>
@@ -63,5 +84,9 @@ export const EventsPage = () => {
       </div>
       <Footer />
     </>
+  ) : (
+    <div className="d-flex justify-content-center ">
+      <div className="spinner-border my-5"></div>
+    </div>
   );
 };

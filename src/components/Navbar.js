@@ -4,21 +4,6 @@ import ReactDOM from "react-dom";
 export const Navbar = () => {
   return (
     <>
-      {/* <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true'></link>
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap" rel="stylesheet"></link> */}
-
-      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="true"
-      ></link>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-        rel="stylesheet"
-      ></link>
-
       <div
         className="navbar fixed-top navbar-expand-xl navbar-dark"
         style={{ backgroundColor: "#2C4230" }}

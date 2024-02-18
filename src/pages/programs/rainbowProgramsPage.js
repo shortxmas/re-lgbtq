@@ -2,9 +2,32 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
+import { LoadingImage } from "../../components/LoadingImage";
 
 export const RainbowProgramsPage = () => {
-  return (
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap";
+    link.rel = "stylesheet";
+
+    // Use a callback to ensure the fonts are loaded
+    link.onload = () => {
+      setFontsLoaded(true);
+    };
+
+    // Append the link to the document head
+    document.head.appendChild(link);
+
+    // Cleanup function
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
+  return fontsLoaded ? (
     <>
       <Navbar />
       <div
@@ -40,12 +63,11 @@ export const RainbowProgramsPage = () => {
             Program, email LGBTQ@hawaii.edu
           </p>
           <div className="row">
-            <div class="col-lg-6">
-              <img
-                src="../../assets/RAINBOW_OHANA_PROGRAM-1.png"
+            <div className="col-lg-6">
+              <LoadingImage
+                uri="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2FRAINBOW_OHANA_PROGRAM-1-min.webp"
                 class="img-fluid w-sm-50"
-                alt="..."
-              ></img>
+              />
             </div>
           </div>
         </div>
@@ -88,8 +110,8 @@ export const RainbowProgramsPage = () => {
             your daily life and how to be an effective ally or advocate for
             LGBTQ+ people.
           </p>
+          <h5>Safe Zone is sponsored by : </h5>
           <p>
-            <h5>Safe Zone is sponsored by : </h5>
             <span>UH Office of the President</span>
             <br></br>
             <span>UH Commission on LGBTQ+ Equality</span>
@@ -109,14 +131,27 @@ export const RainbowProgramsPage = () => {
             <h4 className="fw-bold">SAFEZONE PRE-REGISTRATION IS REQUIRED</h4>
             <p>Click below for the Safe Zone Registration Link:</p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfT4kDkC3Pl2ZC3K0Nfn5u7H5BhmDLjWDgRTL1Fb7JPQvJlhA/viewform">
-              <button type="button" class="btn btn-success fw-bold">
+              <button type="button" className="btn btn-success fw-bold">
                 Saze Zone Registration
               </button>
             </a>
+          </div>
+
+          <div className="row py-3">
+            <div className="col-lg-8">
+              <LoadingImage
+                uri="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2Flgbtq-training.webp"
+                class="img-fluid w-sm-50"
+              />
+            </div>
           </div>
         </div>
       </div>
       <Footer />
     </>
+  ) : (
+    <div className="d-flex justify-content-center ">
+      <div className="spinner-border my-5"></div>
+    </div>
   );
 };

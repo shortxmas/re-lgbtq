@@ -2,25 +2,33 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { ImageCarousel } from "../components/ImageCarousel";
 
 export const HomePage = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap";
+    link.rel = "stylesheet";
 
-  return (
+    // Use a callback to ensure the fonts are loaded
+    link.onload = () => {
+      setFontsLoaded(true);
+    };
+
+    // Append the link to the document head
+    document.head.appendChild(link);
+
+    // Cleanup function
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
+  return fontsLoaded ? (
     <>
-      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="true"
-      ></link>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-        rel="stylesheet"
-      ></link>
-
       <Navbar />
 
       <div
@@ -29,80 +37,7 @@ export const HomePage = () => {
           paddingTop: 100,
         }}
       >
-        <div
-          id="carouselExampleCaptions"
-          className="carousel slide w-100 my-4"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              className="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-          </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active" data-bs-interval="3500">
-              <img
-                src="../../assets/manoa_pride_image_1.png"
-                className="d-block w-100 "
-                alt="..."
-              ></img>
-              <div className="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div className="carousel-item" data-bs-interval="3500">
-              <img
-                src="../../assets/manoa_pride_image_2.png"
-                className="d-block w-100 "
-                alt="..."
-              ></img>
-              <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
-              </div>
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
+        <ImageCarousel />
 
         <div className="text-left my-4 " style={{ fontFamily: "Poppins" }}>
           {/* <div className='text-left my-4 'style={{fontFamily:'Poppins'}} data-sal="slide-down" data-sal-duration="1200"> */}
@@ -142,5 +77,9 @@ export const HomePage = () => {
 
       <Footer />
     </>
+  ) : (
+    <div className="d-flex justify-content-center ">
+      <div className="spinner-border my-5"></div>
+    </div>
   );
 };

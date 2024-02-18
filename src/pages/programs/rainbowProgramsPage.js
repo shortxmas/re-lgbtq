@@ -5,7 +5,29 @@ import { Footer } from "../../components/Footer";
 import { LoadingImage } from "../../components/LoadingImage";
 
 export const RainbowProgramsPage = () => {
-  return (
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap";
+    link.rel = "stylesheet";
+
+    // Use a callback to ensure the fonts are loaded
+    link.onload = () => {
+      setFontsLoaded(true);
+    };
+
+    // Append the link to the document head
+    document.head.appendChild(link);
+
+    // Cleanup function
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
+  return fontsLoaded ? (
     <>
       <Navbar />
       <div
@@ -42,8 +64,10 @@ export const RainbowProgramsPage = () => {
           </p>
           <div className="row">
             <div className="col-lg-6">
-
-              <LoadingImage uri="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2FRAINBOW_OHANA_PROGRAM-1-min.webp" class="img-fluid w-sm-50"/>
+              <LoadingImage
+                uri="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2FRAINBOW_OHANA_PROGRAM-1-min.webp"
+                class="img-fluid w-sm-50"
+              />
             </div>
           </div>
         </div>
@@ -88,7 +112,6 @@ export const RainbowProgramsPage = () => {
           </p>
           <h5>Safe Zone is sponsored by : </h5>
           <p>
-            
             <span>UH Office of the President</span>
             <br></br>
             <span>UH Commission on LGBTQ+ Equality</span>
@@ -116,16 +139,19 @@ export const RainbowProgramsPage = () => {
 
           <div className="row py-3">
             <div className="col-lg-8">
-            <LoadingImage uri="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2Flgbtq-training.webp" class="img-fluid w-sm-50"/>
-
+              <LoadingImage
+                uri="https://lgbtq-center-portal.vercel.app/download/?name=website.File%2Fbytes%2Ffilename%2Fmimetype%2Flgbtq-training.webp"
+                class="img-fluid w-sm-50"
+              />
             </div>
           </div>
-
-          
-
         </div>
       </div>
       <Footer />
     </>
+  ) : (
+    <div className="d-flex justify-content-center ">
+      <div className="spinner-border my-5"></div>
+    </div>
   );
 };

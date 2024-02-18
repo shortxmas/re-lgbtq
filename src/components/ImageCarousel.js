@@ -126,13 +126,13 @@ export const ImageCarousel = () => {
   };
 
   return loading ? (
-    <div class="d-flex justify-content-center " style={loadingVisibility}>
-      <div class="spinner-border my-5" style={loadingVisibility}></div>
+    <div className="d-flex justify-content-center " style={loadingVisibility}>
+      <div className="spinner-border my-5" style={loadingVisibility}></div>
     </div>
   ) : (
     <>
-      <div class="d-flex justify-content-center " style={loadingVisibility}>
-        <div class="spinner-border my-5" style={loadingVisibility}></div>
+      <div className="d-flex justify-content-center " style={loadingVisibility}>
+        <div className="spinner-border my-5" style={loadingVisibility}></div>
       </div>
 
       {carousel()}

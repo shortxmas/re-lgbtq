@@ -28,10 +28,9 @@ export const Footer = () => {
 
   const renderSocialMedias = () => {
     let socialMedias = [];
-    
-    
-    footerData.social_medias.forEach((k,v)=>{
-      console.log(footerData.social_medias[v].social_media);
+
+    footerData.social_medias.forEach((k, v) => {
+      // console.log(footerData.social_medias[v].social_media);
       switch (footerData.social_medias[v].social_media) {
         case "instagram":
           socialMedias.push(
@@ -94,7 +93,7 @@ export const Footer = () => {
           );
           break;
       }
-    })
+    });
     return socialMedias;
   };
 
@@ -109,9 +108,7 @@ export const Footer = () => {
             <span>Get connected with us on our social networks:</span>
           </div>
 
-          <div>
-            {loading ? "" : renderSocialMedias()}
-          </div>
+          <div>{loading ? "" : renderSocialMedias()}</div>
         </section>
         <div></div>
 

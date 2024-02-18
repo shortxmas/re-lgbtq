@@ -90,7 +90,7 @@ export const ContactPageMembers = () => {
     return ret;
   };
 
-  console.log(membersData);
+  // console.log(membersData);
 
   return loading ? (
     <div className="d-flex justify-content-center " style={loadingVisibility}>

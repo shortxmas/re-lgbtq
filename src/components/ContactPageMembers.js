@@ -33,57 +33,116 @@ export const ContactPageMembers = () => {
 
   const renderMembers = () => {
     const ret = [];
+
     membersData.forEach((member) => {
-      if (member.image != null) {
-        ret.push(
-          <div
-            key={member}
-            className="row d-flex justify-content-center align-middle my-2"
-          >
+      if (member.name == "Camaron Miyamoto") {
+        if (member.image != null) {
+          ret.push(
             <div
-              className="col-12 col-lg-4 d-flex py-2 justify-content-center px-5"
-              style={{}}
+              key={member}
+              className="row d-flex justify-content-center align-middle my-2"
             >
-              <LoadingImage class="img-fluid border" uri={member.image} />
-            </div>
+              <div
+                className="col-12 col-lg-4 d-flex py-2 justify-content-center px-5"
+                style={{}}
+              >
+                <LoadingImage class="img-fluid border" uri={member.image} />
+              </div>
 
-            <div
-              className="col-12 col-lg-4 d-flex py-2 px-5"
-              style={{ alignItems: "center" }}
-            >
-              <div style={{ width: "100%" }}>
-                <h3 className="text-start">{member.name}</h3>
-                <h5 className="text-start">{member.title}</h5>
-                <h6 className="text-start">{member.pronouns}</h6>
-                <p className="text-start">{member.email}</p>
+              <div
+                className="col-12 col-lg-4 d-flex py-2 px-5"
+                style={{ alignItems: "center" }}
+              >
+                <div style={{ width: "100%" }}>
+                  <h3 className="text-start">{member.name}</h3>
+                  <h5 className="text-start">{member.title}</h5>
+                  <h6 className="text-start">{member.pronouns}</h6>
+                  <p className="text-start">{member.email}</p>
+                </div>
               </div>
             </div>
-          </div>
-        );
-      } else {
-        ret.push(
-          <div
-            key={member}
-            className="row d-flex justify-content-center align-middle my-2"
-          >
+          );
+        } else {
+          ret.push(
             <div
-              className="col-12 col-lg-4 d-flex py-2 justify-content-center px-5"
-              style={{}}
-            ></div>
-
-            <div
-              className="col-12 col-lg-4 d-flex py-2 px-5"
-              style={{ alignItems: "center" }}
+              key={member}
+              className="row d-flex justify-content-center align-middle my-2"
             >
-              <div style={{ width: "100%" }}>
-                <h3 className="text-start">{member.name}</h3>
-                <h5 className="text-start">{member.title}</h5>
-                <h6 className="text-start">{member.pronouns}</h6>
-                <p className="text-start">{member.email}</p>
+              <div
+                className="col-12 col-lg-4 d-flex py-2 justify-content-center px-5"
+                style={{}}
+              ></div>
+
+              <div
+                className="col-12 col-lg-4 d-flex py-2 px-5"
+                style={{ alignItems: "center" }}
+              >
+                <div style={{ width: "100%" }}>
+                  <h3 className="text-start">{member.name}</h3>
+                  <h5 className="text-start">{member.title}</h5>
+                  <h6 className="text-start">{member.pronouns}</h6>
+                  <p className="text-start">{member.email}</p>
+                </div>
               </div>
             </div>
-          </div>
-        );
+          );
+        }
+      }
+    });
+
+    membersData.forEach((member) => {
+      if (member.name != "Camaron Miyamoto") {
+        if (member.image != null) {
+          ret.push(
+            <div
+              key={member}
+              className="row d-flex justify-content-center align-middle my-2"
+            >
+              <div
+                className="col-12 col-lg-4 d-flex py-2 justify-content-center px-5"
+                style={{}}
+              >
+                <LoadingImage class="img-fluid border" uri={member.image} />
+              </div>
+
+              <div
+                className="col-12 col-lg-4 d-flex py-2 px-5"
+                style={{ alignItems: "center" }}
+              >
+                <div style={{ width: "100%" }}>
+                  <h3 className="text-start">{member.name}</h3>
+                  <h5 className="text-start">{member.title}</h5>
+                  <h6 className="text-start">{member.pronouns}</h6>
+                  <p className="text-start">{member.email}</p>
+                </div>
+              </div>
+            </div>
+          );
+        } else {
+          ret.push(
+            <div
+              key={member}
+              className="row d-flex justify-content-center align-middle my-2"
+            >
+              <div
+                className="col-12 col-lg-4 d-flex py-2 justify-content-center px-5"
+                style={{}}
+              ></div>
+
+              <div
+                className="col-12 col-lg-4 d-flex py-2 px-5"
+                style={{ alignItems: "center" }}
+              >
+                <div style={{ width: "100%" }}>
+                  <h3 className="text-start">{member.name}</h3>
+                  <h5 className="text-start">{member.title}</h5>
+                  <h6 className="text-start">{member.pronouns}</h6>
+                  <p className="text-start">{member.email}</p>
+                </div>
+              </div>
+            </div>
+          );
+        }
       }
     });
 

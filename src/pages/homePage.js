@@ -3,42 +3,9 @@ import ReactDOM from "react-dom";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { ImageCarousel } from "../components/ImageCarousel";
-import { rootUrl } from "../urls";
 
 export const HomePage = () => {
-  const [carouselData, setCarouselData] = useState();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          rootUrl+ "carousel/"
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const jsonData = await response.json();
-
-        setCarouselData(jsonData);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return loading ? (
-    <div
-      className="container d-flex justify-content-center"
-      style={{ height: 500, alignItems: "center" }}
-    >
-      <div class="spinner-border text-secondary" role="status"></div>
-    </div>
-  ) : (
+  return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link
@@ -59,7 +26,7 @@ export const HomePage = () => {
           paddingTop: 100,
         }}
       >
-        <ImageCarousel data={carouselData} />
+        <ImageCarousel />
 
         <div className="text-left my-4 " style={{ fontFamily: "Poppins" }}>
           {/* <div className='text-left my-4 'style={{fontFamily:'Poppins'}} data-sal="slide-down" data-sal-duration="1200"> */}

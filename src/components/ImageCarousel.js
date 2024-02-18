@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import { rootUrl } from "../urls";
 
-export const ImageCarousel = (props) => {
+export const ImageCarousel = () => {
+  const [carouselData, setCarouselData] = useState();
+  const [loading, setLoading] = useState(true);
+
   const [carouselVisibility, changeCarouselVisibility] = useState({
     display: "none",
   });
@@ -17,9 +21,26 @@ export const ImageCarousel = (props) => {
     changeLoadingVisibility({ display: "none" });
   };
 
-  const carouselData = props.data;
-  console.log(carouselData);
-  console.log(carouselData[0].image_url);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(rootUrl + "carousel/");
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const jsonData = await response.json();
+
+        setCarouselData(jsonData);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const renderCarousel = () => {
     let imageArray = [];
 
@@ -74,6 +95,7 @@ export const ImageCarousel = (props) => {
         style={carouselVisibility}
       >
         <div className="carousel-inner">{renderCarousel()}</div>
+        <div className="carousel-inner"></div>
         <button
           className="carousel-control-prev"
           type="button"
@@ -103,7 +125,11 @@ export const ImageCarousel = (props) => {
     );
   };
 
-  return (
+  return loading ? (
+    <div class="d-flex justify-content-center " style={loadingVisibility}>
+      <div class="spinner-border my-5" style={loadingVisibility}></div>
+    </div>
+  ) : (
     <>
       <div class="d-flex justify-content-center " style={loadingVisibility}>
         <div class="spinner-border my-5" style={loadingVisibility}></div>

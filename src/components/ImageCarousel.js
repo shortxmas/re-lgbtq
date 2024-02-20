@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { rootUrl } from "../urls";
+import { LoadingImage } from "./LoadingImage";
 
 export const ImageCarousel = () => {
   const [carouselData, setCarouselData] = useState();
@@ -45,7 +46,7 @@ export const ImageCarousel = () => {
     let imageArray = [];
 
     for (let i = 0; i < carouselData.length; i++) {
-      if (i === carouselData.length - 1) {
+      if (i === 0) {
         imageArray.push(
           <div className="carousel-item active" data-bs-interval="3500">
             <img
@@ -56,7 +57,9 @@ export const ImageCarousel = () => {
               onLoad={() => {
                 hideLoading();
                 showCarousel();
-                document.getElementById("next-button").click();
+                setTimeout(() => {
+                  document.getElementById("next-button").click();
+                }, 3500);
               }}
             ></img>
             <div className="carousel-caption d-none d-md-block">
@@ -68,12 +71,10 @@ export const ImageCarousel = () => {
       } else {
         imageArray.push(
           <div className="carousel-item" data-bs-interval="3500">
-            <img
-              rel="preload"
-              src={carouselData[i].image_url}
-              className="d-block w-100 "
-              alt="..."
-            ></img>
+            <LoadingImage
+              uri={carouselData[i].image_url}
+              class="d-block w-100"
+            />
             <div className="carousel-caption d-none d-md-block">
               <h5 className="text-white">{carouselData[i].label}</h5>
               <p className="text-white">{carouselData[i].description}</p>
